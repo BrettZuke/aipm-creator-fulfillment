@@ -1,0 +1,12 @@
+{
+  "_comment": [
+    "Copy this to knowledge/email_sources.json. It is the list of marketing emails worth reading,",
+    "matched on SENDER, so you do not have to subscribe to anything from a new address: the",
+    "newsletters worth reading are already arriving in the inbox you set as GMAIL_ADDRESS.",
+    "Set active to false to stop reading someone without losing the entry."
+  ],
+  "sources": [
+    { "name": "Example Operator", "from": "hello@example.com", "active": false },
+    { "name": "Another Newsletter", "from": "news@example.com", "active": false }
+  ]
+}

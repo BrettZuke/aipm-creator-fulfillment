@@ -1,0 +1,8 @@
+{
+  "toolPaths": {
+    "ytDlp": "yt-dlp",
+    "whisper": "whisper",
+    "ffmpeg": "ffmpeg"
+  },
+  "setupComplete": false
+}

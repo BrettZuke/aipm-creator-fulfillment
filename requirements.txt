@@ -1,0 +1,30 @@
+# Core
+requests
+python-dotenv
+httpx
+
+# Scraping
+apify-client
+instaloader
+yt-dlp
+youtube-transcript-api
+beautifulsoup4
+lxml
+
+# Free models used by the content machine.
+# openai is here because it is the CLIENT LIBRARY for OpenAI-compatible endpoints, and the
+# free providers (Gemini, Groq, OmniRoute) all speak that protocol. Installing it does not
+# cost anything and does not call OpenAI: the daily chain points it at free base_urls.
+google-generativeai
+groq
+openai
+
+# Google Sheets (sales-call review tooling)
+gspread
+google-api-python-client
+google-auth
+
+# Optional, and PAID. Only content_plan_generator.py and creator_content_engine.py call a
+# paid API, and neither is in the daily chain. Install anthropic only if you have decided to
+# run one of them. Leaving ANTHROPIC_API_KEY unset means nothing can bill by accident.
+# anthropic

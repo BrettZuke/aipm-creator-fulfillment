@@ -1,0 +1,4 @@
+interface:
+  display_name: "Cinematic Caption"
+  short_description: "Build semantic subject-aware HyperFrames captions"
+  default_prompt: "Use $cinematic-caption to select meaningful hero words and build ordered, subject-aware caption stacks in the active HyperFrames project."

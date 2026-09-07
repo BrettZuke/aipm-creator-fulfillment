@@ -1,0 +1,77 @@
+/* ============================================================
+   Carousel Builder — component library
+   Brand-agnostic. Colors + fonts come from each slide's <head>
+   :root block (filled from brand-config.md). Don't edit per-brand
+   values here — set them in the template head so all slides match.
+   ============================================================ */
+
+:root{
+  /* Defaults — overridden per brand in the slide <head>. */
+  --light:#F8F8F8;
+  --dark:#0E0E0E;
+  --accent:#F55C00;
+  --ink:#141414;
+  --muted:#8a8a8a;
+  --display:'Inter', sans-serif;
+  --body:'Inter', sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+body{width:1080px;height:1350px;overflow:hidden;font-family:var(--body);-webkit-font-smoothing:antialiased;}
+
+/* ---------- slide shell ---------- */
+.slide{width:1080px;height:1350px;padding:64px 72px;display:flex;flex-direction:column;position:relative;}
+.slide.light{background:var(--light);color:var(--ink);}
+.slide.dark{background:var(--dark);color:var(--light);}
+.accent{color:var(--accent);}
+
+/* ---------- 4-corner chrome ---------- */
+.chrome{display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--body);font-size:19px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;}
+.chrome .muted{color:var(--muted);}
+.chrome .accent{color:var(--accent);}
+.hairline{height:1px;background:rgba(128,128,128,.25);margin:18px 0;}
+
+/* ---------- centered content area ---------- */
+.main{flex:1;display:flex;flex-direction:column;justify-content:center;padding:24px 0;}
+
+/* ---------- display headline (cover + big statements) ---------- */
+.display{font-family:var(--display);font-weight:900;line-height:1.0;letter-spacing:-.02em;}
+.h-cover{font-size:104px;}
+.h-cover .accent{color:var(--accent);}
+.lead{font-size:38px;line-height:1.4;font-weight:400;margin-top:28px;max-width:880px;color:inherit;opacity:.92;}
+
+/* ---------- numbered section head (body slides) ---------- */
+.head{display:flex;align-items:baseline;gap:18px;}
+.head .num{font-family:var(--display);font-weight:900;font-size:64px;color:var(--accent);line-height:1;}
+.head .name{font-family:var(--display);font-weight:900;font-size:60px;line-height:1;letter-spacing:-.015em;}
+.sub{font-size:28px;font-weight:500;color:var(--muted);margin-top:14px;}
+
+/* ---------- spec rows (label : body) — the "designed" look ---------- */
+.rows{margin-top:40px;}
+.row{display:flex;gap:28px;padding:24px 2px;border-top:1px solid rgba(128,128,128,.22);}
+.rows .row:last-child{border-bottom:1px solid rgba(128,128,128,.22);}
+.rlabel{flex:0 0 200px;font-family:var(--body);text-transform:uppercase;letter-spacing:.1em;
+  font-size:18px;font-weight:700;color:var(--accent);padding-top:5px;}
+.rbody{flex:1;font-family:var(--body);font-size:32px;line-height:1.32;font-weight:500;}
+.rbody b{font-weight:800;}
+
+/* ---------- pill row (preview / tags) ---------- */
+.pills{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px;}
+.pill{font-family:var(--body);font-size:24px;font-weight:600;border:1.6px solid rgba(128,128,128,.35);
+  border-radius:100px;padding:14px 26px;}
+.dark .pill{border-color:rgba(245,245,245,.30);}
+
+/* ---------- CTA button ---------- */
+.cta-btn{display:inline-flex;align-items:center;gap:16px;align-self:flex-start;
+  background:var(--accent);color:#fff;font-family:var(--display);font-weight:900;
+  font-size:40px;letter-spacing:.01em;padding:24px 40px;border-radius:100px;margin-top:36px;
+  box-shadow:0 20px 44px rgba(0,0,0,.22);}
+.cta-btn .kw{background:#fff;color:var(--accent);border-radius:100px;padding:8px 22px;}
+
+/* ---------- handwritten swipe / kicker (uses display italic if no script font) ---------- */
+.swipe{font-family:var(--display);font-weight:900;font-style:italic;color:var(--accent);font-size:40px;margin-top:30px;}
+
+/* ---------- elevation helper: lift a block off the bg so it reads layered ---------- */
+.lift{box-shadow:0 24px 60px rgba(0,0,0,.18);border-radius:20px;}
+.dark .lift{box-shadow:0 24px 60px rgba(0,0,0,.55);}

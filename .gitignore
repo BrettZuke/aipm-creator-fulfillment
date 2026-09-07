@@ -1,0 +1,22 @@
+.env
+.venv/
+.tmp/
+__pycache__/
+*.pyc
+.DS_Store
+sales-calls/transcripts/
+sales-calls/briefs/
+node_modules/
+
+# The client's own material. The *_TEMPLATE.md files stay tracked; your filled-in copies
+# carry a real person's proof, pricing, audience and settled decisions, and must not be
+# committed to anything shared.
+knowledge/WHO.md
+knowledge/BRAND_VOICE.md
+knowledge/PROOF_INVENTORY.md
+knowledge/OFFER.md
+knowledge/AUDIENCE.md
+knowledge/SETTLED_DECISIONS.md
+
+# Prospect names and call content.
+sales-calls/
